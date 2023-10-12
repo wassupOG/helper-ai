@@ -6,7 +6,9 @@ export function Loader() {
       <div className="relative h-12 w-12 animate-spin">
         <Image alt="logo" fill src="/logo.png" />
       </div>
-      <p className="text-sm text-muted-foreground">Helper-AI is processing your request</p>
+      <p className="text-sm text-muted-foreground">
+        Helper-AI is processing your request, it might take up to several minutes.
+      </p>
     </div>
   )
 }

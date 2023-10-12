@@ -23,6 +23,12 @@ export default function Sidebar() {
       color: "#ff6f43",
     },
     {
+      label: "Music Generation",
+      icon: Music,
+      href: "/music",
+      color: "#d11e18",
+    },
+    {
       label: "Conversation",
       icon: MessageSquare,
       href: "/conversation",
@@ -40,18 +46,7 @@ export default function Sidebar() {
       href: "/video",
       color: "#6446c0",
     },
-    {
-      label: "Music Generation",
-      icon: Music,
-      href: "/music",
-      color: "#d11e18",
-    },
-    {
-      label: "Code",
-      icon: Code,
-      href: "/code",
-      color: "#64c046",
-    },
+
     {
       label: "Settings",
       icon: Settings,

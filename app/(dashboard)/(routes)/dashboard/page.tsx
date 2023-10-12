@@ -2,12 +2,18 @@
 
 import { Card } from "@/components/ui/card"
 import { cn } from "@/lib/utils"
-import { ArrowRight, Code, ImageIcon, MessageSquare, Music, VideoIcon } from "lucide-react"
+import { ArrowRight, ImageIcon, MessageSquare, Music, VideoIcon } from "lucide-react"
 import { useRouter } from "next/navigation"
 
 export default function DashboardPage() {
   const router = useRouter()
   const tools = [
+    {
+      label: "Music Generation",
+      icon: Music,
+      href: "/music",
+      color: "#d11e18",
+    },
     {
       label: "Conversation",
       icon: MessageSquare,
@@ -25,18 +31,6 @@ export default function DashboardPage() {
       icon: VideoIcon,
       href: "/video",
       color: "#6446c0",
-    },
-    {
-      label: "Music Generation",
-      icon: Music,
-      href: "/music",
-      color: "#d11e18",
-    },
-    {
-      label: "Code",
-      icon: Code,
-      href: "/code",
-      color: "#64c046",
     },
   ]
 
