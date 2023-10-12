@@ -1,17 +1,13 @@
+"use client"
+
 import { Card } from "@/components/ui/card"
 import { cn } from "@/lib/utils"
-import {
-  ArrowRight,
-  Code,
-  ImageIcon,
-  MessageSquare,
-  Music,
-  Settings,
-  VideoIcon,
-} from "lucide-react"
+import { ArrowRight, Code, ImageIcon, MessageSquare, Music, VideoIcon } from "lucide-react"
+import { useRouter } from "next/navigation"
 
 export default function DashboardPage() {
-  const options = [
+  const router = useRouter()
+  const tools = [
     {
       label: "Conversation",
       icon: MessageSquare,
@@ -51,10 +47,16 @@ export default function DashboardPage() {
         <p className="mt-5 text-center text-2xl">
           Take a look at how you can supercharge your productivity with Helper-AI
         </p>
-        <div className="mt-8 flex flex-col gap-7">
-          {options.map((option) => (
-            <Card className={cn("flex w-[350px] gap-2 bg-slate-100 p-4 shadow-md")}>
-              <option.icon style={{ color: option.color }} /> {option.label}
+        <div className="mt-12 flex w-full flex-col items-center gap-7">
+          {tools.map((tool) => (
+            <Card
+              onClick={() => router.push(tool.href)}
+              key={tool.href}
+              className={cn(
+                "flex  w-[80%] cursor-pointer gap-2 bg-slate-100 p-4 shadow-md transition-all hover:bg-slate-200 md:w-[70%]",
+              )}
+            >
+              <tool.icon style={{ color: tool.color }} /> {tool.label}
               <ArrowRight className=" ml-auto" />
             </Card>
           ))}
