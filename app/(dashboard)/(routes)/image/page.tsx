@@ -85,14 +85,14 @@ export default function ImagePage() {
           </form>
         </Form>
         {isLoading && <Loader />}
+
         <div className="m-4">
           <div className="flex items-center justify-center gap-2 bg-red-100 p-2 text-center text-red-500">
-            <p>
-              Feature <span className=" font-bold">isn't available </span> because my free ChatGPT
-              API quota has exceeded, and they don't accept Russian cards{" "}
-            </p>
+            <div>
+              Feature <span className="font-bold">is not available </span> because my free ChatGPT
+              API quota has exceeded, and they do not accept Russian cards
+            </div>
           </div>
-
           <div>
             <Empty label="You haven't started a conversation yet" />
           </div>
