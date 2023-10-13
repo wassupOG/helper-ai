@@ -80,15 +80,15 @@ export default function VideoPage() {
           </form>
         </Form>
         {isLoading && <Loader />}
-        <div className="mt-4 flex w-full justify-center ">
+        <div className="mt-4 flex justify-center ">
           {!video && (
             <div>
               <Empty label="No videos have been generated yet." />
             </div>
           )}
-          <div className="max-w-[1200px]">
+          <div>
             {video && (
-              <video controls className="m-8 aspect-video w-full rounded-xl">
+              <video controls className="aspect-video w-full rounded-xl">
                 <source src={video} />
               </video>
             )}

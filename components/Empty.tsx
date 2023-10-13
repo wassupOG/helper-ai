@@ -8,7 +8,7 @@ export function Empty({ label }: EmptyProps) {
   return (
     <div className="flex flex-col items-center justify-center">
       <div className="relative h-72 w-72">
-        <Image alt="Empty" fill src="/empty.png" />
+        <Image priority fill alt="Empty" src="/empty.png" />
       </div>
       <p className="text-muted-foreground">{label}</p>
     </div>
