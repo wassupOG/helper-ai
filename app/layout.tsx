@@ -26,7 +26,6 @@ export const metadata: Metadata = {
     title: "Helper-AI",
     description: "AI Platform for productivity improvement.",
     images: "https://helper-ai.vercel.app/og/og_main.png",
-    card: "app",
   },
   manifest: "/favicon/site.webmanifest",
 }
