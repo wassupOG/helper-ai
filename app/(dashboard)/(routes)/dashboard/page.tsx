@@ -15,6 +15,12 @@ export default function DashboardPage() {
       color: "#d11e18",
     },
     {
+      label: "Video Generation",
+      icon: VideoIcon,
+      href: "/video",
+      color: "#6446c0",
+    },
+    {
       label: "Conversation",
       icon: MessageSquare,
       href: "/conversation",
@@ -26,20 +32,17 @@ export default function DashboardPage() {
       href: "/image",
       color: "#d14a69",
     },
-    {
-      label: "Video Generation",
-      icon: VideoIcon,
-      href: "/video",
-      color: "#6446c0",
-    },
   ]
 
   return (
     <>
       <div className="flex flex-col items-center px-4 py-4">
-        <h1 className="text-3xl font-bold md:text-4xl">Explore the power of AI</h1>
-        <p className="mt-5 text-center text-2xl">
-          Take a look at how you can supercharge your productivity with Helper-AI
+        <h1 className="text-center text-2xl font-bold sm:text-3xl md:text-4xl">
+          Explore the power of AI
+        </h1>
+        <p className="mt-5 text-center text-xl md:text-2xl">
+          Take a look at how you can supercharge your productivity with{" "}
+          <span className="font-bold">Helper-AI</span>
         </p>
         <div className="mt-12 flex w-full flex-col items-center gap-7">
           {tools.map((tool) => (

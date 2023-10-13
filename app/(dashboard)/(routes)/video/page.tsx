@@ -2,7 +2,7 @@
 
 import * as z from "zod"
 import { Heading } from "@/components/Heading"
-import { Music, SendHorizontal } from "lucide-react"
+import { SendHorizontal, VideoIcon } from "lucide-react"
 import { useForm } from "react-hook-form"
 import { formSchema } from "./constants"
 import { zodResolver } from "@hookform/resolvers/zod"
@@ -15,9 +15,9 @@ import { useState } from "react"
 import { Empty } from "@/components/Empty"
 import { Loader } from "@/components/Loader"
 
-export default function MusicPage() {
+export default function VideoPage() {
   const router = useRouter()
-  const [music, setMusic] = useState<string>()
+  const [video, setVideo] = useState<string>()
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -30,12 +30,12 @@ export default function MusicPage() {
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
-      setMusic(undefined)
+      setVideo(undefined)
 
-      const response = await axios.post("/api/music", values)
+      const response = await axios.post("/api/video", values)
       console.log(response)
 
-      setMusic(response.data.audio)
+      setVideo(response.data[0])
       form.reset()
     } catch (error: any) {
       console.error(error)
@@ -47,10 +47,10 @@ export default function MusicPage() {
   return (
     <>
       <Heading
-        title="Music Generation"
-        description="Turn your prompt into a music sample with ease"
-        iconColor="text-[#d11e18]"
-        Icon={Music}
+        title="Video Generation"
+        description="Turn your prompt into a video"
+        iconColor="text-[#6446c0]"
+        Icon={VideoIcon}
       />
 
       <div className="px-5 md:px-10">
@@ -67,7 +67,7 @@ export default function MusicPage() {
                     <Input
                       className="outline-none focus-visible:ring-0 focus-visible:ring-transparent"
                       disabled={isLoading}
-                      placeholder="Guitar solo..."
+                      placeholder="A sleeping cat..."
                       {...field}
                     />
                   </FormControl>
@@ -80,17 +80,19 @@ export default function MusicPage() {
           </form>
         </Form>
         {isLoading && <Loader />}
-        <div className="m-4">
-          {!music && (
+        <div className="mt-4 flex w-full justify-center ">
+          {!video && (
             <div>
-              <Empty label="No music has been generated yet." />
+              <Empty label="No videos have been generated yet." />
             </div>
           )}
-          {music && (
-            <audio controls className="m-8 w-full">
-              <source src={music} />
-            </audio>
-          )}
+          <div className="max-w-[1200px]">
+            {video && (
+              <video controls className="m-8 aspect-video w-full rounded-xl">
+                <source src={video} />
+              </video>
+            )}
+          </div>
         </div>
       </div>
     </>

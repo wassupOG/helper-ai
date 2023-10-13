@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: "Helper-AI",
   applicationName: "Helper-AI",
   description: "AI Platform to improve your productivity.",
+  metadataBase: new URL("https://helper-ai.vercel.app/"),
   icons: {
     icon: "/favicon/favicon-32x32.png",
     shortcut: "/favicon/favicon.ico",
@@ -25,6 +26,7 @@ export const metadata: Metadata = {
     title: "Helper-AI",
     description: "AI Platform for productivity improvement.",
     images: "https://helper-ai.vercel.app/og/og_main.png",
+    card: "app",
   },
   manifest: "/favicon/site.webmanifest",
 }

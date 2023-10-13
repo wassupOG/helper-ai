@@ -29,6 +29,12 @@ export default function Sidebar() {
       color: "#d11e18",
     },
     {
+      label: "Video Generation",
+      icon: VideoIcon,
+      href: "/video",
+      color: "#6446c0",
+    },
+    {
       label: "Conversation",
       icon: MessageSquare,
       href: "/conversation",
@@ -40,19 +46,6 @@ export default function Sidebar() {
       href: "/image",
       color: "#d14a69",
     },
-    {
-      label: "Video Generation",
-      icon: VideoIcon,
-      href: "/video",
-      color: "#6446c0",
-    },
-
-    {
-      label: "Settings",
-      icon: Settings,
-      href: "/settings",
-      color: "#E6ECE9",
-    },
   ]
 
   const pathname = usePathname()
@@ -60,8 +53,8 @@ export default function Sidebar() {
   return (
     <div className="flex h-full flex-col bg-zinc-950 px-7 pt-6 text-white">
       <Link
-        href="/dashboard"
-        className="logo flex w-fit items-center gap-1 opacity-90 transition-all ease-in-out hover:opacity-100"
+        href="/"
+        className="logo flex w-fit items-center gap-2 opacity-90 transition-all ease-in-out hover:opacity-100"
       >
         <Image alt="logo" src="/logo.png" height={40} width={40} />
         <h1 className=" text-2xl font-bold">Helper-AI</h1>
