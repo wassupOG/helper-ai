@@ -5,3 +5,4 @@
 * Image Generation
 * Music Generation
 * Video Generation
+* Authentication via Google & GitHub
