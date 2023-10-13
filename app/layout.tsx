@@ -19,6 +19,12 @@ export const metadata: Metadata = {
     description: "AI Platform for productivity improvement.",
     siteName: "Helper-AI",
     type: "website",
+    images: { url: "https://helper-ai.vercel.app/og/og_main.png", width: 1200, height: 630 },
+  },
+  twitter: {
+    title: "Helper-AI",
+    description: "AI Platform for productivity improvement.",
+    images: "https://helper-ai.vercel.app/og/og_main.png",
   },
   manifest: "/favicon/site.webmanifest",
 }
