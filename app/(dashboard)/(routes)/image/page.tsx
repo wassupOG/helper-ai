@@ -94,7 +94,7 @@ export default function ImagePage() {
             </div>
           </div>
           <div>
-            <Empty label="You haven't started a conversation yet" />
+            <Empty label="You have no generated images yet" />
           </div>
         </div>
       </div>

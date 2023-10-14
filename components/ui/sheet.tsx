@@ -53,7 +53,7 @@ const sheetVariants = cva(
 )
 
 interface SheetContentProps {
-  children: React.ReactElement
+  children: any
   className: any
 }
 interface SheetContentProps

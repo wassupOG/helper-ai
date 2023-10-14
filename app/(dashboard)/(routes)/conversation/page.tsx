@@ -94,7 +94,7 @@ export default function ConversationPage() {
           </div>
           {!messages.length && (
             <div>
-              <Empty label="You haven't started a conversation yet" />
+              <Empty label="You have no conversations yet" />
             </div>
           )}
           <div>
